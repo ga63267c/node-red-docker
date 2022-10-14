@@ -3,7 +3,7 @@ ARG NODE_VERSION=16
 ARG OS=alpine
 
 #### Stage BASE ########################################################################################################
-FROM docker.io/${ARCH}/node:${NODE_VERSION}-${OS} AS base
+FROM docker.io/${ARCH}/node:${NODE_VERSION}-${OS} AS basexyz
 
 # Copy scripts
 COPY scripts/*.sh /tmp/
@@ -42,7 +42,7 @@ COPY flows.json /data
 COPY scripts/entrypoint.sh .
 
 #### Stage BUILD #######################################################################################################
-FROM base AS build
+FROM basexyz AS build
 
 # Install Build tools
 RUN apk add --no-cache --virtual buildtools build-base linux-headers udev python3 && \
