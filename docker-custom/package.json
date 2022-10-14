@@ -34,7 +34,8 @@
 	"passport-oauth": "1.0.0",
 	"passport-ibmid-oauth2": "0.0.8",
 	"passport-idaas-openidconnect": "2.0.3",
-        "passport-ibmsso-openidconnect": "1.0.1"	
+        "passport-ibmsso-openidconnect": "1.0.1",
+	"passport-ci-oidc": "2.0.5"
     },
     "engines": {
         "node": ">=12"       
